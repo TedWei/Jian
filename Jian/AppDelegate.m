@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "SinaWeibo.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
+@synthesize sinaweibo;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -17,9 +20,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"SinaWeiboAuthData"];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    NSLog(@"=%d",[defaults boolForKey:@"sinaweiboDidLogin"]);
+    LoginViewController *loginViewController=[[LoginViewController alloc]init];
+    self.window.rootViewController = loginViewController;
+   
     [self.window makeKeyAndVisible];
+    
+    sinaweibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:loginViewController];
+    
+    if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
+    {
+        sinaweibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
+        sinaweibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
+        sinaweibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
+    }
     return YES;
 }
 
@@ -42,13 +60,23 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.sinaweibo applicationDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [self.sinaweibo handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [self.sinaweibo handleOpenURL:url];
+    
 }
 
 - (void)saveContext
