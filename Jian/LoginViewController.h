@@ -12,5 +12,6 @@
 
 @interface LoginViewController : UIViewController<SinaWeiboDelegate,SinaWeiboRequestDelegate,UITabBarControllerDelegate>
 
+-(void)loadMainViewControllers;
 
 @end

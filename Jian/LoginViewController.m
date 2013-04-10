@@ -60,20 +60,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sinaweiboDidLogin"]==YES) {
-        JianHome_timelineViewController *home_timelineViewController=[[JianHome_timelineViewController alloc]init];
-        JianDiscover_timelineViewController *discover_timelineViewController=[[JianDiscover_timelineViewController alloc]init];
-        JianCamerViewController *camerViewController=[[JianCamerViewController alloc]init];
-        JianDefaultViewController *defaultViewControoler=[[JianDefaultViewController alloc]init];
-        UITabBarController *tabbarController=[[UITabBarController alloc]init];
-        NSArray *tabbarControllers=[NSArray arrayWithObjects:home_timelineViewController,discover_timelineViewController,camerViewController,defaultViewControoler, nil];
-        tabbarController.tabBar.backgroundColor=[UIColor blackColor];
-        slightView=[[UIView alloc]initWithFrame:CGRectMake(25 , 0, 30, 5)];        
-        slightView.backgroundColor=[UIColor whiteColor];
-        slightView.alpha=0.2;
-        [tabbarController.tabBar addSubview:slightView];
-        tabbarController.delegate=self;
-        [tabbarController setViewControllers:tabbarControllers];
-        [self presentViewController:tabbarController animated:NO completion:nil];
+        [self loadMainViewControllers];
     }
 
 }
@@ -93,6 +80,23 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)loadMainViewControllers
+{
+    JianHome_timelineViewController *home_timelineViewController=[[JianHome_timelineViewController alloc]init];
+    JianDiscover_timelineViewController *discover_timelineViewController=[[JianDiscover_timelineViewController alloc]init];
+    JianCamerViewController *camerViewController=[[JianCamerViewController alloc]init];
+    JianDefaultViewController *defaultViewControoler=[[JianDefaultViewController alloc]init];
+    UITabBarController *tabbarController=[[UITabBarController alloc]init];
+    NSArray *tabbarControllers=[NSArray arrayWithObjects:home_timelineViewController,discover_timelineViewController,camerViewController,defaultViewControoler, nil];
+    tabbarController.tabBar.backgroundColor=[UIColor blackColor];
+    slightView=[[UIView alloc]initWithFrame:CGRectMake(25 , 0, 30, 5)];
+    slightView.backgroundColor=[UIColor whiteColor];
+    slightView.alpha=0.2;
+    [tabbarController.tabBar addSubview:slightView];
+    tabbarController.delegate=self;
+    [tabbarController setViewControllers:tabbarControllers];
+    [self presentViewController:tabbarController animated:NO completion:nil];
+}
 
 -(void)loginButtonPressend
 {
@@ -105,56 +109,58 @@
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
+    Float32 AlphaDurationtime=0.15;
+    Float32 MoveDurationtime=0.7;
     if (tabBarController.selectedIndex ==3) {
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
         }completion:^(BOOL finished){
                 if (finished) {
                     slightView.alpha=1;
                     } }];
 
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
             [slightView setFrame:CGRectMake(260, 0, 35, 5)];} completion:^(BOOL finished){
             if (finished) {
-                [UIView animateWithDuration:0.2 animations:^(void){slightView.alpha=0.2;}];
+                [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
                 } }];        
     }
     if (tabBarController.selectedIndex ==2) {
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
         }completion:^(BOOL finished){
             if (finished) {
                 slightView.alpha=1;
             } }];
         
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
             [slightView setFrame:CGRectMake(180, 0, 35, 5)];} completion:^(BOOL finished){
                 if (finished) {
-                    [UIView animateWithDuration:0.2 animations:^(void){slightView.alpha=0.2;}];
+                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
                 } }];
     }
     if (tabBarController.selectedIndex ==1) {
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
         }completion:^(BOOL finished){
             if (finished) {
                 slightView.alpha=1;
             } }];
         
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
             [slightView setFrame:CGRectMake(100, 0, 35, 5)];} completion:^(BOOL finished){
                 if (finished) {
-                    [UIView animateWithDuration:0.2 animations:^(void){slightView.alpha=0.2;}];
+                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
                 } }];
     }
     if (tabBarController.selectedIndex ==0) {
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
         }completion:^(BOOL finished){
             if (finished) {
                 slightView.alpha=1;
             } }];
         
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
+        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
             [slightView setFrame:CGRectMake(20, 0, 35, 5)];} completion:^(BOOL finished){
                 if (finished) {
-                    [UIView animateWithDuration:0.2 animations:^(void){slightView.alpha=0.2;}];
+                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
                 } }];
     }
 
@@ -170,14 +176,7 @@
     BOOL sinaweiboDidLogin = YES;
     [[NSUserDefaults standardUserDefaults] setBool:sinaweiboDidLogin forKey:@"sinaweiboDidLogin"];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sinaweiboDidLogin"]==YES) {
-        JianHome_timelineViewController *home_timelineViewController=[[JianHome_timelineViewController alloc]init];
-        JianDiscover_timelineViewController *discover_timelineViewController=[[JianDiscover_timelineViewController alloc]init];
-        JianCamerViewController *camerViewController=[[JianCamerViewController alloc]init];
-        JianDefaultViewController *defaultViewControoler=[[JianDefaultViewController alloc]init];
-        UITabBarController *tabbarController=[[UITabBarController alloc]init];
-        NSArray *tabbarControllers=[NSArray arrayWithObjects:home_timelineViewController,discover_timelineViewController,camerViewController,defaultViewControoler, nil];
-        [tabbarController setViewControllers:tabbarControllers];
-        [self presentViewController:tabbarController animated:YES completion:nil];
+        [self loadMainViewControllers];
     }
     [self storeAuthData];
 }
