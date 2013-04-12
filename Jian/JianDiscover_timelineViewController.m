@@ -29,6 +29,16 @@
 	// Do any additional setup after loading the view.
 }
 
+- (NSString *)tabImageName
+{
+	return @"discovericon";
+}
+
+- (NSString *)tabTitle
+{
+	return self.title;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

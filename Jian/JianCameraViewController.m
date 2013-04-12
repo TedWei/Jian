@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 卫 强. All rights reserved.
 //
 
-#import "JianCamerViewController.h"
+#import "JianCameraViewController.h"
 
-@interface JianCamerViewController ()
+@interface JianCameraViewController ()
 
 @end
 
-@implementation JianCamerViewController
+@implementation JianCameraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +31,7 @@
 
 - (NSString *)tabImageName
 {
-	return @"tabBar-camera";
+	return @"cameraicon";
 }
 
 - (NSString *)tabTitle

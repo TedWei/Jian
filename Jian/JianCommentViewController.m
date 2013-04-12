@@ -1,18 +1,14 @@
 //
-//  JianCamerViewController.m
+//  JianCommentViewController.m
 //  Jian
 //
-//  Created by Ted on 10/4/13.
+//  Created by Ted on 13/4/13.
 //  Copyright (c) 2013 卫 强. All rights reserved.
 //
 
-#import "JianCamerViewController.h"
+#import "JianCommentViewController.h"
 
-@interface JianCamerViewController ()
-
-@end
-
-@implementation JianCamerViewController
+@implementation JianCommentViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,19 +25,16 @@
 	// Do any additional setup after loading the view.
 }
 
+
 - (NSString *)tabImageName
 {
-	return @"tabBar-camera";
+	return @"commenticon";
 }
 
 - (NSString *)tabTitle
 {
 	return self.title;
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

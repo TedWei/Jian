@@ -44,6 +44,15 @@
 
 	// Do any additional setup after loading the view.
 }
+- (NSString *)tabImageName
+{
+	return @"defaulticon";
+}
+
+- (NSString *)tabTitle
+{
+	return self.title;
+}
 
 -(void)loginButtonPressend
 {

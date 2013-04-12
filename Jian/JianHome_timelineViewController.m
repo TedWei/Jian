@@ -39,6 +39,15 @@
 	// Do any additional setup after loading the view.
 }
 
+- (NSString *)tabImageName
+{
+	return @"homeicon";
+}
+
+- (NSString *)tabTitle
+{
+	return self.title;
+}
 
 
 

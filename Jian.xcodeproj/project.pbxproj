@@ -14,9 +14,6 @@
 		4DEEAFAA1714377800CE180D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFA81714377800CE180D /* InfoPlist.strings */; };
 		4DEEAFAC1714377800CE180D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFAB1714377800CE180D /* main.m */; };
 		4DEEAFB01714377800CE180D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFAF1714377800CE180D /* AppDelegate.m */; };
-		4DEEAFB21714377800CE180D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFB11714377800CE180D /* Default.png */; };
-		4DEEAFB41714377800CE180D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFB31714377800CE180D /* Default@2x.png */; };
-		4DEEAFB61714377800CE180D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFB51714377800CE180D /* Default-568h@2x.png */; };
 		4DEEAFB91714377800CE180D /* Jian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFB71714377800CE180D /* Jian.xcdatamodeld */; };
 		4DEEAFCB171437DC00CE180D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFC1171437DC00CE180D /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4DEEAFCC171437DC00CE180D /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFC3171437DC00CE180D /* SinaWeibo.bundle */; };
@@ -28,8 +25,59 @@
 		4DEEAFD917143C3E00CE180D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFD817143C3E00CE180D /* LoginViewController.m */; };
 		4DEEAFE41715B86100CE180D /* JianHome_timelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFE31715B86100CE180D /* JianHome_timelineViewController.m */; };
 		4DEEAFEA1715BF3200CE180D /* JianDiscover_timelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFE91715BF3200CE180D /* JianDiscover_timelineViewController.m */; };
-		4DEEAFED1715BF4F00CE180D /* JianCamerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFEC1715BF4F00CE180D /* JianCamerViewController.m */; };
+		4DEEAFED1715BF4F00CE180D /* JianCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFEC1715BF4F00CE180D /* JianCameraViewController.m */; };
 		4DEEAFF01715BF6A00CE180D /* JianDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEAFEF1715BF6900CE180D /* JianDefaultViewController.m */; };
+		4DEEAFF41716DA6400CE180D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFF31716DA6400CE180D /* Default.png */; };
+		4DEEAFF61716DB1E00CE180D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFF51716DB1E00CE180D /* Default@2x.png */; };
+		4DEEAFF81716E20300CE180D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFF71716E20300CE180D /* Default-568h@2x.png */; };
+		4DEEAFFA1716E89700CE180D /* Default1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEAFF91716E89700CE180D /* Default1.png */; };
+		4DEEB039171856AA00CE180D /* JianTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB038171856AA00CE180D /* JianTabBar.m */; };
+		4DEEB03C1718570A00CE180D /* JianTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB03B1718570A00CE180D /* JianTab.m */; };
+		4DEEB03F1718578800CE180D /* JianTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB03E1718578800CE180D /* JianTabBarView.m */; };
+		4DEEB042171857C800CE180D /* UINavigationController+JianTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB041171857C800CE180D /* UINavigationController+JianTabBarController.m */; };
+		4DEEB0451718581700CE180D /* UIViewController+JianTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB0441718581700CE180D /* UIViewController+JianTabBarControllerViewController.m */; };
+		4DEEB048171858B300CE180D /* JianTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB047171858B200CE180D /* JianTabBarController.m */; };
+		4DEEB04A17185B8500CE180D /* AKTabBarController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB04917185B8500CE180D /* AKTabBarController.bundle */; };
+		4DEEB04C17185C9000CE180D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEEB04B17185C9000CE180D /* QuartzCore.framework */; };
+		4DEEB05117185DE400CE180D /* noise-dark-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB04D17185DE400CE180D /* noise-dark-blue.png */; };
+		4DEEB05217185DE400CE180D /* noise-dark-blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB04E17185DE400CE180D /* noise-dark-blue@2x.png */; };
+		4DEEB05317185DE400CE180D /* noise-dark-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB04F17185DE400CE180D /* noise-dark-gray.png */; };
+		4DEEB05417185DE400CE180D /* noise-dark-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB05017185DE400CE180D /* noise-dark-gray@2x.png */; };
+		4DEEB0571718705E00CE180D /* Icon-Dev.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0551718705D00CE180D /* Icon-Dev.png */; };
+		4DEEB0581718705E00CE180D /* Icon-Dev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0561718705E00CE180D /* Icon-Dev@2x.png */; };
+		4DEEB05B1718729900CE180D /* accounts-glyph-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0591718729900CE180D /* accounts-glyph-icon.png */; };
+		4DEEB05C1718729900CE180D /* accounts-glyph-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB05A1718729900CE180D /* accounts-glyph-icon@2x.png */; };
+		4DEEB0711718734800CE180D /* tabBar-activity-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB05D1718733F00CE180D /* tabBar-activity-on.png */; };
+		4DEEB0721718734800CE180D /* tabBar-activity-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB05E1718733F00CE180D /* tabBar-activity-on@2x.png */; };
+		4DEEB0731718734800CE180D /* tabBar-activity.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB05F1718734000CE180D /* tabBar-activity.png */; };
+		4DEEB0741718734800CE180D /* tabBar-activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0601718734000CE180D /* tabBar-activity@2x.png */; };
+		4DEEB0751718734800CE180D /* tabBar-camera-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0611718734100CE180D /* tabBar-camera-on.png */; };
+		4DEEB0761718734800CE180D /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0621718734100CE180D /* tabBar-camera-on@2x.png */; };
+		4DEEB0771718734800CE180D /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0631718734100CE180D /* tabBar-camera.png */; };
+		4DEEB0781718734800CE180D /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0641718734200CE180D /* tabBar-camera@2x.png */; };
+		4DEEB0791718734800CE180D /* tabBar-home-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0651718734200CE180D /* tabBar-home-on.png */; };
+		4DEEB07A1718734800CE180D /* tabBar-home-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0661718734300CE180D /* tabBar-home-on@2x.png */; };
+		4DEEB07B1718734800CE180D /* tabBar-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0671718734300CE180D /* tabBar-home.png */; };
+		4DEEB07C1718734800CE180D /* tabBar-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0681718734300CE180D /* tabBar-home@2x.png */; };
+		4DEEB07D1718734800CE180D /* tabBar-popular-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0691718734300CE180D /* tabBar-popular-on.png */; };
+		4DEEB07E1718734800CE180D /* tabBar-popular-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06A1718734300CE180D /* tabBar-popular-on@2x.png */; };
+		4DEEB07F1718734800CE180D /* tabBar-popular.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06B1718734600CE180D /* tabBar-popular.png */; };
+		4DEEB0801718734800CE180D /* tabBar-popular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06C1718734600CE180D /* tabBar-popular@2x.png */; };
+		4DEEB0811718734800CE180D /* tabBar-profile-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06D1718734700CE180D /* tabBar-profile-on.png */; };
+		4DEEB0821718734800CE180D /* tabBar-profile-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06E1718734700CE180D /* tabBar-profile-on@2x.png */; };
+		4DEEB0831718734800CE180D /* tabBar-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB06F1718734700CE180D /* tabBar-profile.png */; };
+		4DEEB0841718734800CE180D /* tabBar-profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB0701718734700CE180D /* tabBar-profile@2x.png */; };
+		4DEEB087171877E100CE180D /* JianCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEB086171877E000CE180D /* JianCommentViewController.m */; };
+		4DEEB08A17187CF300CE180D /* cameraicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08817187CF000CE180D /* cameraicon.png */; };
+		4DEEB08B17187CF300CE180D /* cameraicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08917187CF100CE180D /* cameraicon@2x.png */; };
+		4DEEB09217187D0600CE180D /* defaulticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08C17187D0100CE180D /* defaulticon.png */; };
+		4DEEB09317187D0600CE180D /* defaulticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08D17187D0200CE180D /* defaulticon@2x.png */; };
+		4DEEB09417187D0600CE180D /* discovericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08E17187D0200CE180D /* discovericon.png */; };
+		4DEEB09517187D0600CE180D /* discovericon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB08F17187D0300CE180D /* discovericon@2x.png */; };
+		4DEEB09617187D0600CE180D /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB09017187D0400CE180D /* homeicon.png */; };
+		4DEEB09717187D0600CE180D /* homeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB09117187D0500CE180D /* homeicon@2x.png */; };
+		4DEEB09A17187E5500CE180D /* commenticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB09817187E5300CE180D /* commenticon.png */; };
+		4DEEB09B17187E5500CE180D /* commenticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEB09917187E5400CE180D /* commenticon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +92,6 @@
 		4DEEAFAD1714377800CE180D /* Jian-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jian-Prefix.pch"; sourceTree = "<group>"; };
 		4DEEAFAE1714377800CE180D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DEEAFAF1714377800CE180D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4DEEAFB11714377800CE180D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		4DEEAFB31714377800CE180D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		4DEEAFB51714377800CE180D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4DEEAFB81714377800CE180D /* Jian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jian.xcdatamodel; sourceTree = "<group>"; };
 		4DEEAFC0171437DC00CE180D /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4DEEAFC1171437DC00CE180D /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -67,10 +112,68 @@
 		4DEEAFE31715B86100CE180D /* JianHome_timelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianHome_timelineViewController.m; sourceTree = "<group>"; };
 		4DEEAFE81715BF3100CE180D /* JianDiscover_timelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianDiscover_timelineViewController.h; sourceTree = "<group>"; };
 		4DEEAFE91715BF3200CE180D /* JianDiscover_timelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianDiscover_timelineViewController.m; sourceTree = "<group>"; };
-		4DEEAFEB1715BF4F00CE180D /* JianCamerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianCamerViewController.h; sourceTree = "<group>"; };
-		4DEEAFEC1715BF4F00CE180D /* JianCamerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianCamerViewController.m; sourceTree = "<group>"; };
+		4DEEAFEB1715BF4F00CE180D /* JianCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianCameraViewController.h; sourceTree = "<group>"; };
+		4DEEAFEC1715BF4F00CE180D /* JianCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianCameraViewController.m; sourceTree = "<group>"; };
 		4DEEAFEE1715BF6900CE180D /* JianDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianDefaultViewController.h; sourceTree = "<group>"; };
 		4DEEAFEF1715BF6900CE180D /* JianDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianDefaultViewController.m; sourceTree = "<group>"; };
+		4DEEAFF31716DA6400CE180D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		4DEEAFF51716DB1E00CE180D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		4DEEAFF71716E20300CE180D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		4DEEAFF91716E89700CE180D /* Default1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default1.png; sourceTree = "<group>"; };
+		4DEEB037171856AA00CE180D /* JianTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianTabBar.h; sourceTree = "<group>"; };
+		4DEEB038171856AA00CE180D /* JianTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianTabBar.m; sourceTree = "<group>"; };
+		4DEEB03A1718570A00CE180D /* JianTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianTab.h; sourceTree = "<group>"; };
+		4DEEB03B1718570A00CE180D /* JianTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianTab.m; sourceTree = "<group>"; };
+		4DEEB03D1718578800CE180D /* JianTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianTabBarView.h; sourceTree = "<group>"; };
+		4DEEB03E1718578800CE180D /* JianTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianTabBarView.m; sourceTree = "<group>"; };
+		4DEEB040171857C800CE180D /* UINavigationController+JianTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JianTabBarController.h"; sourceTree = "<group>"; };
+		4DEEB041171857C800CE180D /* UINavigationController+JianTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JianTabBarController.m"; sourceTree = "<group>"; };
+		4DEEB0431718581600CE180D /* UIViewController+JianTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JianTabBarControllerViewController.h"; sourceTree = "<group>"; };
+		4DEEB0441718581700CE180D /* UIViewController+JianTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JianTabBarControllerViewController.m"; sourceTree = "<group>"; };
+		4DEEB046171858B200CE180D /* JianTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianTabBarController.h; sourceTree = "<group>"; };
+		4DEEB047171858B200CE180D /* JianTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianTabBarController.m; sourceTree = "<group>"; };
+		4DEEB04917185B8500CE180D /* AKTabBarController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AKTabBarController.bundle; sourceTree = "<group>"; };
+		4DEEB04B17185C9000CE180D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4DEEB04D17185DE400CE180D /* noise-dark-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-blue.png"; sourceTree = "<group>"; };
+		4DEEB04E17185DE400CE180D /* noise-dark-blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-blue@2x.png"; sourceTree = "<group>"; };
+		4DEEB04F17185DE400CE180D /* noise-dark-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-gray.png"; sourceTree = "<group>"; };
+		4DEEB05017185DE400CE180D /* noise-dark-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noise-dark-gray@2x.png"; sourceTree = "<group>"; };
+		4DEEB0551718705D00CE180D /* Icon-Dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Dev.png"; sourceTree = "<group>"; };
+		4DEEB0561718705E00CE180D /* Icon-Dev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Dev@2x.png"; sourceTree = "<group>"; };
+		4DEEB0591718729900CE180D /* accounts-glyph-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accounts-glyph-icon.png"; sourceTree = "<group>"; };
+		4DEEB05A1718729900CE180D /* accounts-glyph-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accounts-glyph-icon@2x.png"; sourceTree = "<group>"; };
+		4DEEB05D1718733F00CE180D /* tabBar-activity-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-activity-on.png"; sourceTree = "<group>"; };
+		4DEEB05E1718733F00CE180D /* tabBar-activity-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-activity-on@2x.png"; sourceTree = "<group>"; };
+		4DEEB05F1718734000CE180D /* tabBar-activity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-activity.png"; sourceTree = "<group>"; };
+		4DEEB0601718734000CE180D /* tabBar-activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-activity@2x.png"; sourceTree = "<group>"; };
+		4DEEB0611718734100CE180D /* tabBar-camera-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on.png"; sourceTree = "<group>"; };
+		4DEEB0621718734100CE180D /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
+		4DEEB0631718734100CE180D /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
+		4DEEB0641718734200CE180D /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
+		4DEEB0651718734200CE180D /* tabBar-home-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-home-on.png"; sourceTree = "<group>"; };
+		4DEEB0661718734300CE180D /* tabBar-home-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-home-on@2x.png"; sourceTree = "<group>"; };
+		4DEEB0671718734300CE180D /* tabBar-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-home.png"; sourceTree = "<group>"; };
+		4DEEB0681718734300CE180D /* tabBar-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-home@2x.png"; sourceTree = "<group>"; };
+		4DEEB0691718734300CE180D /* tabBar-popular-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-popular-on.png"; sourceTree = "<group>"; };
+		4DEEB06A1718734300CE180D /* tabBar-popular-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-popular-on@2x.png"; sourceTree = "<group>"; };
+		4DEEB06B1718734600CE180D /* tabBar-popular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-popular.png"; sourceTree = "<group>"; };
+		4DEEB06C1718734600CE180D /* tabBar-popular@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-popular@2x.png"; sourceTree = "<group>"; };
+		4DEEB06D1718734700CE180D /* tabBar-profile-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-profile-on.png"; sourceTree = "<group>"; };
+		4DEEB06E1718734700CE180D /* tabBar-profile-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-profile-on@2x.png"; sourceTree = "<group>"; };
+		4DEEB06F1718734700CE180D /* tabBar-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-profile.png"; sourceTree = "<group>"; };
+		4DEEB0701718734700CE180D /* tabBar-profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-profile@2x.png"; sourceTree = "<group>"; };
+		4DEEB085171877DF00CE180D /* JianCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JianCommentViewController.h; sourceTree = "<group>"; };
+		4DEEB086171877E000CE180D /* JianCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JianCommentViewController.m; sourceTree = "<group>"; };
+		4DEEB08817187CF000CE180D /* cameraicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraicon.png; sourceTree = "<group>"; };
+		4DEEB08917187CF100CE180D /* cameraicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraicon@2x.png"; sourceTree = "<group>"; };
+		4DEEB08C17187D0100CE180D /* defaulticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaulticon.png; sourceTree = "<group>"; };
+		4DEEB08D17187D0200CE180D /* defaulticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaulticon@2x.png"; sourceTree = "<group>"; };
+		4DEEB08E17187D0200CE180D /* discovericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discovericon.png; sourceTree = "<group>"; };
+		4DEEB08F17187D0300CE180D /* discovericon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discovericon@2x.png"; sourceTree = "<group>"; };
+		4DEEB09017187D0400CE180D /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
+		4DEEB09117187D0500CE180D /* homeicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeicon@2x.png"; sourceTree = "<group>"; };
+		4DEEB09817187E5300CE180D /* commenticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commenticon.png; sourceTree = "<group>"; };
+		4DEEB09917187E5400CE180D /* commenticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "commenticon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEEB04C17185C9000CE180D /* QuartzCore.framework in Frameworks */,
 				4DEEAF9E1714377800CE180D /* UIKit.framework in Frameworks */,
 				4DEEAFA01714377800CE180D /* Foundation.framework in Frameworks */,
 				4DEEAFA21714377800CE180D /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +212,7 @@
 		4DEEAF9C1714377800CE180D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DEEB04B17185C9000CE180D /* QuartzCore.framework */,
 				4DEEAF9D1714377800CE180D /* UIKit.framework */,
 				4DEEAF9F1714377800CE180D /* Foundation.framework */,
 				4DEEAFA11714377800CE180D /* CoreGraphics.framework */,
@@ -119,9 +224,8 @@
 		4DEEAFA51714377800CE180D /* Jian */ = {
 			isa = PBXGroup;
 			children = (
-				4DEEAFD317143A0900CE180D /* loginbtn_03.png */,
-				4DEEAFD417143A0900CE180D /* loginbtn_03@2x.png */,
-				4DEEAFDA17144EAC00CE180D /* public.h */,
+				4DEEB0361718568800CE180D /* JianTabBarController */,
+				4DEEB00B1717103900CE180D /* images */,
 				4DEEAFBF171437DC00CE180D /* JSONKit */,
 				4DEEAFC2171437DC00CE180D /* SinaWeibo */,
 				4DEEAFAE1714377800CE180D /* AppDelegate.h */,
@@ -132,10 +236,12 @@
 				4DEEAFE31715B86100CE180D /* JianHome_timelineViewController.m */,
 				4DEEAFE81715BF3100CE180D /* JianDiscover_timelineViewController.h */,
 				4DEEAFE91715BF3200CE180D /* JianDiscover_timelineViewController.m */,
-				4DEEAFEB1715BF4F00CE180D /* JianCamerViewController.h */,
-				4DEEAFEC1715BF4F00CE180D /* JianCamerViewController.m */,
+				4DEEAFEB1715BF4F00CE180D /* JianCameraViewController.h */,
+				4DEEAFEC1715BF4F00CE180D /* JianCameraViewController.m */,
 				4DEEAFEE1715BF6900CE180D /* JianDefaultViewController.h */,
 				4DEEAFEF1715BF6900CE180D /* JianDefaultViewController.m */,
+				4DEEB085171877DF00CE180D /* JianCommentViewController.h */,
+				4DEEB086171877E000CE180D /* JianCommentViewController.m */,
 				4DEEAFB71714377800CE180D /* Jian.xcdatamodeld */,
 				4DEEAFA61714377800CE180D /* Supporting Files */,
 			);
@@ -146,12 +252,12 @@
 			isa = PBXGroup;
 			children = (
 				4DEEAFA71714377800CE180D /* Jian-Info.plist */,
+				4DEEAFF31716DA6400CE180D /* Default.png */,
+				4DEEAFF51716DB1E00CE180D /* Default@2x.png */,
+				4DEEAFF71716E20300CE180D /* Default-568h@2x.png */,
 				4DEEAFA81714377800CE180D /* InfoPlist.strings */,
 				4DEEAFAB1714377800CE180D /* main.m */,
 				4DEEAFAD1714377800CE180D /* Jian-Prefix.pch */,
-				4DEEAFB11714377800CE180D /* Default.png */,
-				4DEEAFB31714377800CE180D /* Default@2x.png */,
-				4DEEAFB51714377800CE180D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -178,6 +284,75 @@
 				4DEEAFCA171437DC00CE180D /* SinaWeiboRequest.m */,
 			);
 			path = SinaWeibo;
+			sourceTree = "<group>";
+		};
+		4DEEB00B1717103900CE180D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4DEEB09817187E5300CE180D /* commenticon.png */,
+				4DEEB09917187E5400CE180D /* commenticon@2x.png */,
+				4DEEB08C17187D0100CE180D /* defaulticon.png */,
+				4DEEB08D17187D0200CE180D /* defaulticon@2x.png */,
+				4DEEB08E17187D0200CE180D /* discovericon.png */,
+				4DEEB08F17187D0300CE180D /* discovericon@2x.png */,
+				4DEEB09017187D0400CE180D /* homeicon.png */,
+				4DEEB09117187D0500CE180D /* homeicon@2x.png */,
+				4DEEB08817187CF000CE180D /* cameraicon.png */,
+				4DEEB08917187CF100CE180D /* cameraicon@2x.png */,
+				4DEEB0551718705D00CE180D /* Icon-Dev.png */,
+				4DEEB0561718705E00CE180D /* Icon-Dev@2x.png */,
+				4DEEAFD317143A0900CE180D /* loginbtn_03.png */,
+				4DEEAFD417143A0900CE180D /* loginbtn_03@2x.png */,
+				4DEEAFF91716E89700CE180D /* Default1.png */,
+				4DEEAFDA17144EAC00CE180D /* public.h */,
+				4DEEB04D17185DE400CE180D /* noise-dark-blue.png */,
+				4DEEB04E17185DE400CE180D /* noise-dark-blue@2x.png */,
+				4DEEB04F17185DE400CE180D /* noise-dark-gray.png */,
+				4DEEB05017185DE400CE180D /* noise-dark-gray@2x.png */,
+				4DEEB0591718729900CE180D /* accounts-glyph-icon.png */,
+				4DEEB05A1718729900CE180D /* accounts-glyph-icon@2x.png */,
+				4DEEB05D1718733F00CE180D /* tabBar-activity-on.png */,
+				4DEEB05E1718733F00CE180D /* tabBar-activity-on@2x.png */,
+				4DEEB05F1718734000CE180D /* tabBar-activity.png */,
+				4DEEB0601718734000CE180D /* tabBar-activity@2x.png */,
+				4DEEB0611718734100CE180D /* tabBar-camera-on.png */,
+				4DEEB0621718734100CE180D /* tabBar-camera-on@2x.png */,
+				4DEEB0631718734100CE180D /* tabBar-camera.png */,
+				4DEEB0641718734200CE180D /* tabBar-camera@2x.png */,
+				4DEEB0651718734200CE180D /* tabBar-home-on.png */,
+				4DEEB0661718734300CE180D /* tabBar-home-on@2x.png */,
+				4DEEB0671718734300CE180D /* tabBar-home.png */,
+				4DEEB0681718734300CE180D /* tabBar-home@2x.png */,
+				4DEEB0691718734300CE180D /* tabBar-popular-on.png */,
+				4DEEB06A1718734300CE180D /* tabBar-popular-on@2x.png */,
+				4DEEB06B1718734600CE180D /* tabBar-popular.png */,
+				4DEEB06C1718734600CE180D /* tabBar-popular@2x.png */,
+				4DEEB06D1718734700CE180D /* tabBar-profile-on.png */,
+				4DEEB06E1718734700CE180D /* tabBar-profile-on@2x.png */,
+				4DEEB06F1718734700CE180D /* tabBar-profile.png */,
+				4DEEB0701718734700CE180D /* tabBar-profile@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		4DEEB0361718568800CE180D /* JianTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4DEEB046171858B200CE180D /* JianTabBarController.h */,
+				4DEEB047171858B200CE180D /* JianTabBarController.m */,
+				4DEEB03A1718570A00CE180D /* JianTab.h */,
+				4DEEB03B1718570A00CE180D /* JianTab.m */,
+				4DEEB037171856AA00CE180D /* JianTabBar.h */,
+				4DEEB038171856AA00CE180D /* JianTabBar.m */,
+				4DEEB03D1718578800CE180D /* JianTabBarView.h */,
+				4DEEB03E1718578800CE180D /* JianTabBarView.m */,
+				4DEEB040171857C800CE180D /* UINavigationController+JianTabBarController.h */,
+				4DEEB041171857C800CE180D /* UINavigationController+JianTabBarController.m */,
+				4DEEB0431718581600CE180D /* UIViewController+JianTabBarControllerViewController.h */,
+				4DEEB0441718581700CE180D /* UIViewController+JianTabBarControllerViewController.m */,
+				4DEEB04917185B8500CE180D /* AKTabBarController.bundle */,
+			);
+			name = JianTabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,12 +407,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEEAFAA1714377800CE180D /* InfoPlist.strings in Resources */,
-				4DEEAFB21714377800CE180D /* Default.png in Resources */,
-				4DEEAFB41714377800CE180D /* Default@2x.png in Resources */,
-				4DEEAFB61714377800CE180D /* Default-568h@2x.png in Resources */,
 				4DEEAFCC171437DC00CE180D /* SinaWeibo.bundle in Resources */,
 				4DEEAFD517143A0900CE180D /* loginbtn_03.png in Resources */,
 				4DEEAFD617143A0900CE180D /* loginbtn_03@2x.png in Resources */,
+				4DEEAFF41716DA6400CE180D /* Default.png in Resources */,
+				4DEEAFF61716DB1E00CE180D /* Default@2x.png in Resources */,
+				4DEEAFF81716E20300CE180D /* Default-568h@2x.png in Resources */,
+				4DEEAFFA1716E89700CE180D /* Default1.png in Resources */,
+				4DEEB04A17185B8500CE180D /* AKTabBarController.bundle in Resources */,
+				4DEEB05117185DE400CE180D /* noise-dark-blue.png in Resources */,
+				4DEEB05217185DE400CE180D /* noise-dark-blue@2x.png in Resources */,
+				4DEEB05317185DE400CE180D /* noise-dark-gray.png in Resources */,
+				4DEEB05417185DE400CE180D /* noise-dark-gray@2x.png in Resources */,
+				4DEEB0571718705E00CE180D /* Icon-Dev.png in Resources */,
+				4DEEB0581718705E00CE180D /* Icon-Dev@2x.png in Resources */,
+				4DEEB05B1718729900CE180D /* accounts-glyph-icon.png in Resources */,
+				4DEEB05C1718729900CE180D /* accounts-glyph-icon@2x.png in Resources */,
+				4DEEB0711718734800CE180D /* tabBar-activity-on.png in Resources */,
+				4DEEB0721718734800CE180D /* tabBar-activity-on@2x.png in Resources */,
+				4DEEB0731718734800CE180D /* tabBar-activity.png in Resources */,
+				4DEEB0741718734800CE180D /* tabBar-activity@2x.png in Resources */,
+				4DEEB0751718734800CE180D /* tabBar-camera-on.png in Resources */,
+				4DEEB0761718734800CE180D /* tabBar-camera-on@2x.png in Resources */,
+				4DEEB0771718734800CE180D /* tabBar-camera.png in Resources */,
+				4DEEB0781718734800CE180D /* tabBar-camera@2x.png in Resources */,
+				4DEEB0791718734800CE180D /* tabBar-home-on.png in Resources */,
+				4DEEB07A1718734800CE180D /* tabBar-home-on@2x.png in Resources */,
+				4DEEB07B1718734800CE180D /* tabBar-home.png in Resources */,
+				4DEEB07C1718734800CE180D /* tabBar-home@2x.png in Resources */,
+				4DEEB07D1718734800CE180D /* tabBar-popular-on.png in Resources */,
+				4DEEB07E1718734800CE180D /* tabBar-popular-on@2x.png in Resources */,
+				4DEEB07F1718734800CE180D /* tabBar-popular.png in Resources */,
+				4DEEB0801718734800CE180D /* tabBar-popular@2x.png in Resources */,
+				4DEEB0811718734800CE180D /* tabBar-profile-on.png in Resources */,
+				4DEEB0821718734800CE180D /* tabBar-profile-on@2x.png in Resources */,
+				4DEEB0831718734800CE180D /* tabBar-profile.png in Resources */,
+				4DEEB0841718734800CE180D /* tabBar-profile@2x.png in Resources */,
+				4DEEB08A17187CF300CE180D /* cameraicon.png in Resources */,
+				4DEEB08B17187CF300CE180D /* cameraicon@2x.png in Resources */,
+				4DEEB09217187D0600CE180D /* defaulticon.png in Resources */,
+				4DEEB09317187D0600CE180D /* defaulticon@2x.png in Resources */,
+				4DEEB09417187D0600CE180D /* discovericon.png in Resources */,
+				4DEEB09517187D0600CE180D /* discovericon@2x.png in Resources */,
+				4DEEB09617187D0600CE180D /* homeicon.png in Resources */,
+				4DEEB09717187D0600CE180D /* homeicon@2x.png in Resources */,
+				4DEEB09A17187E5500CE180D /* commenticon.png in Resources */,
+				4DEEB09B17187E5500CE180D /* commenticon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +473,15 @@
 				4DEEAFD917143C3E00CE180D /* LoginViewController.m in Sources */,
 				4DEEAFE41715B86100CE180D /* JianHome_timelineViewController.m in Sources */,
 				4DEEAFEA1715BF3200CE180D /* JianDiscover_timelineViewController.m in Sources */,
-				4DEEAFED1715BF4F00CE180D /* JianCamerViewController.m in Sources */,
+				4DEEAFED1715BF4F00CE180D /* JianCameraViewController.m in Sources */,
 				4DEEAFF01715BF6A00CE180D /* JianDefaultViewController.m in Sources */,
+				4DEEB039171856AA00CE180D /* JianTabBar.m in Sources */,
+				4DEEB03C1718570A00CE180D /* JianTab.m in Sources */,
+				4DEEB03F1718578800CE180D /* JianTabBarView.m in Sources */,
+				4DEEB042171857C800CE180D /* UINavigationController+JianTabBarController.m in Sources */,
+				4DEEB0451718581700CE180D /* UIViewController+JianTabBarControllerViewController.m in Sources */,
+				4DEEB048171858B300CE180D /* JianTabBarController.m in Sources */,
+				4DEEB087171877E100CE180D /* JianCommentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +563,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jian/Jian-Prefix.pch";
 				INFOPLIST_FILE = "Jian/Jian-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -352,6 +575,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jian/Jian-Prefix.pch";
 				INFOPLIST_FILE = "Jian/Jian-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

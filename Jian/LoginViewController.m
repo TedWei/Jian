@@ -10,14 +10,15 @@
 #import "AppDelegate.h"
 #import "JianHome_timelineViewController.h"
 #import "JianDiscover_timelineViewController.h"
-#import "JianCamerViewController.h"
+#import "JianCameraViewController.h"
 #import "JianDefaultViewController.h"
+#import "JianTabBarController.h"
+#import "JianCommentViewController.h"
 
 
 @interface LoginViewController ()
 {
     UIView *slightView;
-
 }
 @end
 
@@ -59,9 +60,11 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"sinaweiboDidLogin"]==YES) {
         [self loadMainViewControllers];
     }
+    
 
 }
 
@@ -80,21 +83,34 @@
 	// Do any additional setup after loading the view.
 }
 
+
+
+
+
 -(void)loadMainViewControllers
 {
     JianHome_timelineViewController *home_timelineViewController=[[JianHome_timelineViewController alloc]init];
+    
+    
+    
     JianDiscover_timelineViewController *discover_timelineViewController=[[JianDiscover_timelineViewController alloc]init];
-    JianCamerViewController *camerViewController=[[JianCamerViewController alloc]init];
+
+    JianCameraViewController *cameraViewController=[[JianCameraViewController alloc]init];
     JianDefaultViewController *defaultViewControoler=[[JianDefaultViewController alloc]init];
-    UITabBarController *tabbarController=[[UITabBarController alloc]init];
-    NSArray *tabbarControllers=[NSArray arrayWithObjects:home_timelineViewController,discover_timelineViewController,camerViewController,defaultViewControoler, nil];
-    tabbarController.tabBar.backgroundColor=[UIColor blackColor];
-    slightView=[[UIView alloc]initWithFrame:CGRectMake(25 , 0, 30, 5)];
-    slightView.backgroundColor=[UIColor whiteColor];
-    slightView.alpha=0.2;
-    [tabbarController.tabBar addSubview:slightView];
-    tabbarController.delegate=self;
+    JianCommentViewController *commentViewController=[[JianCommentViewController alloc]init];
+
+    JianTabBarController *tabbarController=[[JianTabBarController alloc]initWithTabBarHeight:50];
+    [tabbarController setMinimumHeightToDisplayTitle:40];
+    
+    NSMutableArray *tabbarControllers=[NSMutableArray arrayWithObjects:home_timelineViewController,discover_timelineViewController,cameraViewController,commentViewController,defaultViewControoler,nil];
+    
+    [tabbarController setTabTitleIsHidden:YES];
+    
+     [tabbarController setIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1], [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
+    [tabbarController setSelectedIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1], [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
+    
     [tabbarController setViewControllers:tabbarControllers];
+    
     [self presentViewController:tabbarController animated:NO completion:nil];
 }
 
@@ -109,8 +125,8 @@
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    Float32 AlphaDurationtime=0.15;
-    Float32 MoveDurationtime=0.7;
+    Float32 AlphaDurationtime=0.05;
+    Float32 MoveDurationtime=0.2;
     if (tabBarController.selectedIndex ==3) {
         [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
         }completion:^(BOOL finished){

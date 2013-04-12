@@ -12,6 +12,9 @@
 
 @implementation AppDelegate
 
+    
+
+
 @synthesize sinaweibo;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -26,8 +29,30 @@
     self.window.backgroundColor = [UIColor whiteColor];
     NSLog(@"=%d",[defaults boolForKey:@"sinaweiboDidLogin"]);
     LoginViewController *loginViewController=[[LoginViewController alloc]init];
+
+    UIImageView *appStartImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Default"]];
+    appStartImageView.frame=[[UIScreen mainScreen]bounds];
+    
+    UIImageView *appleLogo=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Default1"]];
+    appleLogo.frame=CGRectMake(120, 160, 80, 80);
+    [self.window addSubview:appStartImageView];
+    [self.window addSubview:appleLogo];
+    
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionShowHideTransitionViews
+                     animations:^(void){
+                         appStartImageView.alpha=0;
+                         appleLogo.alpha=0;
+                         appleLogo.center=CGPointMake(160, 240);
+                         appleLogo.frame=self.window.bounds;
+
+                     }
+                     completion:^(BOOL finished) {
+                         if (finished) {
+                         }
+                     }];
+    
     self.window.rootViewController = loginViewController;
-   
+
     [self.window makeKeyAndVisible];
     
     sinaweibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:loginViewController];
@@ -41,10 +66,14 @@
     return YES;
 }
 
+    
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -60,11 +89,13 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+
     [self.sinaweibo applicationDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ApplicationRestarted"];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
