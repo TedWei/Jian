@@ -10,7 +10,10 @@
 #import "SinaWeibo.h"
 #import "SinaWeiboRequest.h"
 
-@interface LoginViewController : UIViewController<SinaWeiboDelegate,SinaWeiboRequestDelegate,UITabBarControllerDelegate>
+@interface LoginViewController : UIViewController<SinaWeiboDelegate,SinaWeiboRequestDelegate>
+{
+    NSMutableArray *statuses;
+}
 
 -(void)loadMainViewControllers;
 -(void)loadAppStartImageView;

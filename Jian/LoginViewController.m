@@ -125,60 +125,6 @@
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    Float32 AlphaDurationtime=0.05;
-    Float32 MoveDurationtime=0.2;
-    if (tabBarController.selectedIndex ==3) {
-        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-        }completion:^(BOOL finished){
-                if (finished) {
-                    slightView.alpha=1;
-                    } }];
-
-        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-            [slightView setFrame:CGRectMake(260, 0, 35, 5)];} completion:^(BOOL finished){
-            if (finished) {
-                [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
-                } }];        
-    }
-    if (tabBarController.selectedIndex ==2) {
-        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-        }completion:^(BOOL finished){
-            if (finished) {
-                slightView.alpha=1;
-            } }];
-        
-        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-            [slightView setFrame:CGRectMake(180, 0, 35, 5)];} completion:^(BOOL finished){
-                if (finished) {
-                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
-                } }];
-    }
-    if (tabBarController.selectedIndex ==1) {
-        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-        }completion:^(BOOL finished){
-            if (finished) {
-                slightView.alpha=1;
-            } }];
-        
-        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-            [slightView setFrame:CGRectMake(100, 0, 35, 5)];} completion:^(BOOL finished){
-                if (finished) {
-                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
-                } }];
-    }
-    if (tabBarController.selectedIndex ==0) {
-        [UIView animateWithDuration:AlphaDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-        }completion:^(BOOL finished){
-            if (finished) {
-                slightView.alpha=1;
-            } }];
-        
-        [UIView animateWithDuration:MoveDurationtime delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^(void){
-            [slightView setFrame:CGRectMake(20, 0, 35, 5)];} completion:^(BOOL finished){
-                if (finished) {
-                    [UIView animateWithDuration:AlphaDurationtime animations:^(void){slightView.alpha=0.2;}];
-                } }];
-    }
 
 
 
@@ -221,6 +167,75 @@
     NSLog(@"sinaweiboAccessTokenInvalidOrExpired %@", error);
     [self removeAuthData];
 }
+
+//#pragma mark - SinaWeiboRequest Delegate
+//
+//- (void)request:(SinaWeiboRequest *)request didFailWithError:(NSError *)error
+//{
+//    if ([request.url hasSuffix:@"users/show.json"])
+//    {
+//       
+//    }
+//    else if ([request.url hasSuffix:@"statuses/home_timeline.json"])
+//    {
+//   
+//    }
+//  /*  else if ([request.url hasSuffix:@"statuses/update.json"])
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
+//                                                            message:[NSString stringWithFormat:@"Post status \"%@\" failed!", postStatusText]
+//                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
+//        
+//        NSLog(@"Post status failed with error : %@", error);
+//    }
+//    else if ([request.url hasSuffix:@"statuses/upload.json"])
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
+//                                                            message:[NSString stringWithFormat:@"Post image status \"%@\" failed!", postImageStatusText]
+//                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
+//        
+//        NSLog(@"Post image status failed with error : %@", error);
+//    }
+//    */
+//    
+//}
+//
+//- (void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result
+//{
+//    if ([request.url hasSuffix:@"users/show.json"])
+//    {
+//
+//     //   userInfo = result;
+//    }
+//    else if ([request.url hasSuffix:@"statuses/home_timeline.json"]){
+//
+//        statuses = [result objectForKey:@"statuses"] ;
+//    }
+// /*   else if ([request.url hasSuffix:@"statuses/update.json"])
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
+//                                                            message:[NSString stringWithFormat:@"Post status \"%@\" succeed!", [result objectForKey:@"text"]]
+//                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
+//        [alertView release];
+//        
+//        [postStatusText release], postStatusText = nil;
+//    }
+//    else if ([request.url hasSuffix:@"statuses/upload.json"])
+//    {
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
+//                                                            message:[NSString stringWithFormat:@"Post image status \"%@\" succeed!", [result objectForKey:@"text"]]
+//                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
+//        [alertView release];
+//        
+//        [postImageStatusText release], postImageStatusText = nil;
+//  */
+//    }
+//
+
 
 - (void)didReceiveMemoryWarning
 {

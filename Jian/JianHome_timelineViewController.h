@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface JianHome_timelineViewController : UIViewController
+@interface JianHome_timelineViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,EGORefreshTableHeaderDelegate>
+{
+    UIActivityIndicatorView *activityView;
+    UIButton *refreshButton;
+    EGORefreshTableHeaderView *refreshHeaderView;
+    UIView *navBarView;
+}
+
+-(void)startRefreshing;
 
 @end
     
